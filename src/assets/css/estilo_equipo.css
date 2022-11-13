@@ -1,0 +1,72 @@
+.banner-equipo{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 1000px;
+    height: 80vh;
+}
+#img-banner{
+    width: 700px;
+    height: 70vh;
+}
+.section-jugadores{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card-jugador{
+    width: 340px;
+    height: 500px;
+    clip-path: polygon(33% 0, 50% 4%, 66% 0, 100% 10%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0 71%, 0 10%);
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+#img-jugador{
+    width: 160px;
+    height: 160px;
+}
+.nombre-jugador{
+    color: black;
+}
+@media (max-width: 780px){
+    .banner-equipo{
+        width: 700px;
+    }
+    #img-banner{
+        width: 100%;
+    }
+}
+@media (max-width: 700px){
+    .banner-equipo{
+        height: 75vh;
+    }
+    #img-banner{
+        height: 60vh;
+    }
+}
+@media (max-width: 580px){
+    .banner-equipo{
+        margin-top: 60px;
+        width: 500px;
+        height: 65vh;
+    }
+    #img-banner{
+        width: 100%;
+        height: 55vh;
+    }
+}
+@media (max-width: 520px){
+    .banner-equipo{
+        display: none;
+    }
+    .section-jugadores{
+        margin-top: 40px;
+    }
+}

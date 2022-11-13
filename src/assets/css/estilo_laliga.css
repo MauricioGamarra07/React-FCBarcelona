@@ -1,0 +1,93 @@
+.busqueda{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.seleccione{
+    margin-right: 20px;
+}
+#temporada{
+    padding: 10px;
+}
+.encabezado{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.tabla-posiciones{
+    width: 90%;
+    margin: auto;
+}
+#img-equipo{
+    width: 10%;
+    float: left;
+    margin-right: 20px;
+}
+.final{
+    height: 30px;
+}
+
+@media (max-width: 900px){
+    .tabla-posiciones{
+        width: 95%;
+    }
+    #img-equipo{
+        width: 15%;
+    }
+}
+@media (max-width: 700px){
+    .busqueda{
+        width: 80%;
+    }
+}
+@media (max-width: 600px){
+    .tabla-posiciones{
+        overflow: scroll;
+        flex-wrap: wrap;
+    }
+    #img-equipo{
+        width: 25%;
+    }
+    .busqueda{
+        flex-direction: column;
+    }
+    .seleccione{
+        margin-bottom: 10px;
+    }
+    .encabezado{
+        flex-direction: column;
+        transform: translateY(-2%);
+    }
+    #logo-liga{
+        width: 40%;
+        margin: auto;
+        transform: translateY(-10%);
+    }
+    .nombre-liga{
+        transform: translateY(-100%);
+    }
+    .tabla-posiciones{
+        max-height: 650px;
+        transform: translateY(-5%);
+    }
+}
+@media (max-width: 460px){
+    .tabla-posiciones{
+        max-height: 615px;
+    }
+}
+@media (max-width: 440px){
+    .nombre-liga{
+        transform: translateY(-40%);
+    }
+}
+@media (max-width: 400px){
+    #logo-liga{
+        width: 50%;
+    }
+}
