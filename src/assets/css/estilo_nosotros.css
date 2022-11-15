@@ -249,9 +249,6 @@ h2{
         width: 90%;
         padding: 20px 30px;
     }
-    .cont-img-jug{
-        width: 90%;
-    } 
 }
 @media (max-width: 600px){
     .cont-banner{
@@ -275,14 +272,6 @@ h2{
         width: 60%;
         margin: auto;
     }
-    .cont-modal{
-        width: 80%;
-        height: 80%;
-    }
-    .cont-img-jug{
-        width: 90%;
-        height: 70%;
-    }
     #img-trofeos{
         width: 90%;
         height: 45vh;
@@ -304,14 +293,6 @@ h2{
     .tarifas{
         width: 80%;
     }
-    .cont-modal{
-        width: 90%;
-        height: 70%;
-    }
-    .cont-img-jug{
-        width: 90%;
-        height: 70%;
-    } 
 }
 @media (max-width: 440px){
     #img-campnou{

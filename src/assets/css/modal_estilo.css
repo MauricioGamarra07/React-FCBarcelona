@@ -75,10 +75,6 @@
         display: flex;
         flex-direction: column;
     }
-    #img-jugador{
-        width: 75%;
-        height: 60%;
-    }
     .datos-jugador{
         margin-top: 15px;
     }

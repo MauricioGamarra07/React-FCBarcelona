@@ -3,11 +3,24 @@ import estadio from '../images/CampNouStadium.png'
 import trofeos from '../images/barcelona-trofeos.png'
 import museo from '../images/museo_barca.jpg'
 import messi from '../images/leyenda-1.jpg'
+import ronaldinho from '../images/leyenda-2.jpg'
+import puyol from '../images/leyenda-3.jpg'
+import iniesta from '../images/leyenda-4.jpg'
+import xavi from '../images/leyenda-5.jpg'
 import '../css/estilo_nosotros.css'
+import Modal from './Modal'
 
 function Nosotros() {
 
-  const [estadoModal, setEstadoModal] = useState(true);
+  let variable = '';
+
+  const [estadoModal, setEstadoModal] = useState(false);
+  const [jugador, setJugador] = useState("");
+  const [imagen, setImagen] = useState(variable);
+  const [titulos, setTitulos] = useState(0);
+  const [partidos, setPartidos] = useState(0);
+  const [goles, setGoles] = useState(0);
+  const [asistencias, setAsistencias] = useState(0);
 
   return (
     <div>
@@ -152,13 +165,65 @@ function Nosotros() {
       <section className='section-leyendas'>
         <h2 className='subtitulo'>Nuestras Leyendas</h2>
         <div className='galeria-leyendas'>
-          <div className='img-leyenda messi' id='1'></div>
-          <div className='img-leyenda ronaldinho' id='2'></div>
-          <div className='img-leyenda puyol' id='3'></div>
-          <div className='img-leyenda iniesta' id='4'></div>
-          <div className='img-leyenda xavi' id='5'></div>
+          <div className='img-leyenda messi' id='1' onClick={() => {
+            setEstadoModal(true);
+            setJugador("Lionel Messi");
+            setImagen(messi);
+            setTitulos(41);
+            setPartidos(836);
+            setGoles(709);
+            setAsistencias(265);
+          }}></div>
+          <div className='img-leyenda ronaldinho' id='2' onClick={() => {
+            setEstadoModal(true);
+            setJugador("Ronaldinho");
+            setImagen(ronaldinho);
+            setTitulos(5);
+            setPartidos(250);
+            setGoles(110);
+            setAsistencias(61);
+          }}></div>
+          <div className='img-leyenda puyol' id='3' onClick={() => {
+            setEstadoModal(true);
+            setJugador("Carles Puyol");
+            setImagen(puyol);
+            setTitulos(19);
+            setPartidos(593);
+            setGoles(18);
+            setAsistencias(0);
+          }}></div>
+          <div className='img-leyenda iniesta' id='4' onClick={() => {
+            setEstadoModal(true);
+            setJugador("Andrés Iniesta");
+            setImagen(iniesta);
+            setTitulos(39);
+            setPartidos(758);
+            setGoles(66);
+            setAsistencias(139);
+          }}></div>
+          <div className='img-leyenda xavi' id='5' onClick={() => {
+            setEstadoModal(true);
+            setJugador("Xavi");
+            setImagen(xavi);
+            setTitulos(32);
+            setPartidos(869);
+            setGoles(97);
+            setAsistencias(185);
+          }}></div>
         </div>
       </section>
+
+      <Modal estado={estadoModal} cambiarEstado={setEstadoModal} nombreJugador={jugador}>
+        <div className="info-jugador">
+          <img src={imagen} alt="" id='img-jugador' />
+          <div className="datos-jugador">
+            <h5>Títulos 🏆: {titulos}</h5>
+            <h5>Partidos jugados 🥅: {partidos}</h5>
+            <h5>Goles ⚽: {goles}</h5>
+            <h5>Asistencias 👟: {asistencias}</h5>
+          </div>
+        </div>
+      </Modal>
 
     </div>
   )
