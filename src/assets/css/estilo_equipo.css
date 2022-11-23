@@ -1,12 +1,11 @@
 .banner-equipo{
-    margin-top: 30px;
     margin-bottom: 80px;
     width: 1000px;
-    height: 80vh;
+    height: 85vh;
 }
 #img-banner{
-    width: 700px;
-    height: 70vh;
+    width: 750px;
+    height: 75vh;
 }
 .section-jugadores{
     width: 90%;
@@ -29,11 +28,24 @@
     margin-right: 10px;
 }
 #img-jugador{
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+.info-jugador{
+    display: flex;
+    flex-direction: column;
 }
 .nombre-jugador{
+    margin-top: 0;
     color: black;
+}
+.pos{
+    transform: translateY(-20px);
+}
+.dorsal{
+    transform: translateY(-20px);
 }
 @media (max-width: 780px){
     .banner-equipo{

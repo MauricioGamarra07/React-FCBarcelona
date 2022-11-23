@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import plantel from '../images/plantel_barca.jpg'
+import plantilla from '../images/plantilla.png'
 import primera_equipacion from '../images/equipo_primera_v.jpg'
 import equipacion_dorada from '../images/equipo_v_dorada.jpg'
 import equipacion_lila from '../images/equipo_v_lila.jpg'
@@ -40,7 +40,7 @@ function Equipo() {
         </div>
         <div className="carousel-inner">
           <div align="center" className="carousel-item active">
-            <img src={plantel} alt="..." id='img-banner' />
+            <img src={plantilla} alt="..." id='img-banner' />
           </div>
           <div align="center" className="carousel-item">
             <img src={primera_equipacion} alt="..." id='img-banner' />
@@ -66,13 +66,21 @@ function Equipo() {
       <div className='section-jugadores'>
         {
           players.map((item, index) => {
+            let dorsal = 0;
+            if (item.number == null) {
+              dorsal = "Barca B";
+            }
+            else{
+              dorsal = `Dorsal: ${item.number}`;
+            }
+
             return (
               <div className='card-jugador' key={index}>
                 <img src={item.photo} alt="" id='img-jugador' />
                 <div className='info-jugador'>
                   <h2 className='nombre-jugador'>Nombre: {item.name}</h2>
-                  <h4 className='text-center'>Posición: {item.position}</h4>
-                  <h4 className='text-center'>Dorsal: {item.number}</h4>
+                  <h4 className='text-center pos'>Posición: {item.position}</h4>
+                  <h4 className='text-center dorsal'>{dorsal}</h4>
                 </div>
               </div>
             )
