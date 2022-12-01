@@ -33,18 +33,18 @@ function App() {
             </div>
             <nav className='botonera'>
               <ul>
-                <Link to='/' className='enlace'>Inicio</Link>
-                <Link to='/nosotros' className='enlace'>Nosotros</Link>
-                <Link to='/equipo' className='enlace'>Equipo</Link>
-                <Link to='/laligaespañola' className='enlace'>La Liga</Link>
+                <Link to='/React-FCBarcelona/' className='enlace'>Inicio</Link>
+                <Link to='/React-FCBarcelona/nosotros' className='enlace'>Nosotros</Link>
+                <Link to='/React-FCBarcelona/equipo' className='enlace'>Equipo</Link>
+                <Link to='/React-FCBarcelona/laligaespañola' className='enlace'>La Liga</Link>
               </ul>
             </nav>
           </header>
           <Routes>
-            <Route path='/' element={<Inicio />} />
-            <Route path='/nosotros' element={<Nosotros />} />
-            <Route path='/equipo' element={<Equipo />} />
-            <Route path='/laligaespañola' element={<LaLiga />} />
+            <Route path='/React-FCBarcelona/' element={<Inicio />} />
+            <Route path='/React-FCBarcelona/nosotros' element={<Nosotros />} />
+            <Route path='/React-FCBarcelona/equipo' element={<Equipo />} />
+            <Route path='/React-FCBarcelona/laligaespañola' element={<LaLiga />} />
           </Routes>
         </Router>
       </Fragment>
